@@ -12,6 +12,7 @@ $.getJSON(current_url, function(data) {
 	document.getElementById("title").innerHTML=data.post.title;
 	document.getElementById("byline").innerHTML='&mdash; '+data.post.author.name;
 	document.getElementById("content").innerHTML=data.post.content;
+    window.scrollTo(0, 0);
 });
 current_url=globalData.previous_url+'?json=1';
 }
@@ -23,6 +24,8 @@ $.getJSON(current_url, function(data) {
 	document.getElementById("title").innerHTML=data.post.title;
 	document.getElementById("byline").innerHTML='&mdash; '+data.post.author.name;
 	document.getElementById("content").innerHTML=data.post.content;
+    window.scrollTo(0, 0);
+
 });
 current_url=globalData.next_url+'?json=1';
 }
