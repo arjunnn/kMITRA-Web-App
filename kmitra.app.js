@@ -31,8 +31,4 @@ $.getJSON(current_url, function(data) {
 current_url=globalData.next_url+'?json=1';
 }
 else{alert("you have read all the articles!");}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/gh-pages
