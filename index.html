@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
 <head>
 	<title>kMITRA Web App</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="kmitra.app.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <script type="text/javascript">
 $.getJSON();
 </script>
-</head>
 <style type="text/css">
+	div{
+		margin: auto;
+		position: relative;
+	}
 	body{
 		font-family: 'Open Sans';
 		font-size: 1.9em;
@@ -22,28 +26,39 @@ $.getJSON();
 	#content img {
   max-height: 100%;
   max-width: 100%;
-}
+	}
+	#place-holder,#nav{
+		font-size: 2em;
+		text-align: center;
+	}
+	#title, #footer{
+		text-align: center;
+	}
+	#byline{
+		text-align: right;
+	}
 </style>
+</head>
 <body>
 <div class="container-fluid" id="fullpage">
 	<div class="row">
 		<div class="col-sm-3"></div>
-		<div class="col-sm-6" align="center">
+		<div class="col-sm-6">
 			<h1 id="title" class="page-header"></h1>
-			<h4 id="byline" align="right"></h4>
+			<h4 id="byline"></h4>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6">
-			<div id="content"><p style="font-size:2em;text-align:center;">Loading...<br/>Please wait.</p></div>
+			<div id="content"><p id="place-holder">Loading...<br/>Please wait.</p></div>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
 	<div class="row">
 		<div class="col-sm-3"></div>
-		<div class="col-sm-6" align="center">
+		<div class="col-sm-6" id="nav">
 			<button class="btn btn-large" onclick="navToPrevious()">&#8592; Previous</button>
 			<button class="btn btn-large" onclick="navToNext()">Next &#8594;</button>
 			<span id="next-post"></span>
@@ -53,9 +68,9 @@ $.getJSON();
 	</div>
 	<div class="row">
 		<div class="col-sm-3"></div>
-		<div class="col-sm-6" align="center">
+		<div class="col-sm-6">
 			<br/>
-			<p class="footer">Made with &hearts; by kMITRA</p>
+			<p id="footer" class="footer">Made with &hearts; by kMITRA</p>
 		</div>
 		<div class="col-sm-3"></div>
 	</div>
