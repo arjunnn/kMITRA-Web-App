@@ -6,29 +6,21 @@ $.getJSON(current_url, function(data) {
 	document.getElementById("content").innerHTML=data.post.content;
 });
 function navToPrevious(){
-window.scrollTo(0, 0);
-document.getElementById("content").innerHTML='<p style="font-size:2em;text-align:center;">Loading...<br/>Please wait.</p>';
 current_url = globalData.previous_url+'?json=1';
-$.getJSON(current_url, function(data) {
-	window.globalData = data;
-	document.getElementById("title").innerHTML=data.post.title;
-	document.getElementById("byline").innerHTML='&mdash; '+data.post.author.name;
-	document.getElementById("content").innerHTML=data.post.content;
-});
-current_url=globalData.previous_url+'?json=1';
+fillArticle(current_url,0);
 }
 function navToNext(){
-window.scrollTo(0, 0);
-document.getElementById("content").innerHTML='<p style="font-size:2em;text-align:center;">Loading...<br/>Please wait.</p>';
-if(globalData.next_url){
 current_url = globalData.next_url+'?json=1';
-$.getJSON(current_url, function(data) {
-	window.globalData = data;
-	document.getElementById("title").innerHTML=data.post.title;
-	document.getElementById("byline").innerHTML='&mdash; '+data.post.author.name;
-	document.getElementById("content").innerHTML=data.post.content;
-});
-current_url=globalData.next_url+'?json=1';
+fillArticle(current_url,1)
 }
-else{alert("you have read all the articles!");}
+function fillArticle(current_url,p){
+	$.getJSON(current_url, function(data){
+		document.getElementById("content").innerHTML='<p style="font-size:2em;text-align:center;">Loading...<br/>Please wait.</p>';
+		window.scrollTo(0,0);
+		window.globalData=data;
+		document.getElementById("title").innerHTML=data.post.title;
+		document.getElementById("byline").innerHTML='&mdash; '+data.post.author.name;
+		document.getElementById("content").innerHTML=data.post.content;
+	});
+	p=1?current_url=globalData.previous_url+'?json=1':current_url=globalData.next_url+'?json=1';
 }
