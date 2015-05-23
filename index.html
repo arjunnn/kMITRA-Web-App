@@ -8,37 +8,11 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <script type="text/javascript">
 $.getJSON();
 </script>
-<style type="text/css">
-	div{
-		margin: auto;
-		position: relative;
-	}
-	body{
-		font-family: 'Open Sans';
-		font-size: 1.9em;
-	}
-	button{
-		width: 10em;
-	}
-	#content img {
-  max-height: 100%;
-  max-width: 100%;
-	}
-	#place-holder,#nav{
-		font-size: 2em;
-		text-align: center;
-	}
-	#title, #footer{
-		text-align: center;
-	}
-	#byline{
-		text-align: right;
-	}
-</style>
 </head>
 <body>
 <div class="container-fluid" id="fullpage">
@@ -60,8 +34,8 @@ $.getJSON();
 	<div class="row">
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6" id="nav">
-			<button class="btn btn-large" onclick="navToPrevious()"><span class="fa fa-chevron-left"></span><strong>		Previous</strong></button>
-			<button class="btn btn-large" onclick="navToNext()"><strong>Next		</strong><span class="fa fa-chevron-right"></span></button>
+			<button class="btn btn-large" onclick="navToPrevious()"><span class="fa fa-chevron-left"></span><strong>Previous</strong></button>
+			<button class="btn btn-large" onclick="navToNext()"><strong>Next</strong><span class="fa fa-chevron-right"></span></button>
 			<span id="next-post"></span>
 			<span id="previous-post"></span>
 		</div>

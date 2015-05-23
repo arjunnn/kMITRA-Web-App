@@ -1,0 +1,25 @@
+	div{
+		margin: auto;
+		position: relative;
+	}
+	body{
+		font-family: 'Open Sans';
+		font-size: 1.9em;
+	}
+	button{
+		width: 10em;
+	}
+	#content img {
+  max-height: 100%;
+  max-width: 100%;
+	}
+	#place-holder,#nav{
+		font-size: 2em;
+		text-align: center;
+	}
+	#title, #footer{
+		text-align: center;
+	}
+	#byline{
+		text-align: right;
+	}
