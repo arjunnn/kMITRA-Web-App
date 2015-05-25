@@ -7,9 +7,9 @@ $.getJSON(current_url, function(data) {
 });
 function navToPrevious(){
 	window.scrollTo(0, 0);
+	document.getElementById("content").innerHTML='<p style="font-size:2em;text-align:center;">Loading...<br/>Please wait.</p>';
 	current_url = globalData.previous_url+'?json=1';
 	$.getJSON(current_url, function(data) {
-		document.getElementById("content").innerHTML='<p style="font-size:2em;text-align:center;">Loading...<br/>Please wait.</p>';
 		window.globalData = data;
 		document.getElementById("title").innerHTML=data.post.title;
 		document.getElementById("byline").innerHTML='&mdash; '+data.post.author.name;
@@ -19,9 +19,9 @@ current_url=globalData.previous_url+'?json=1';
 }
 function navToNext(){
 	window.scrollTo(0, 0);
+	document.getElementById("content").innerHTML='<p style="font-size:2em;text-align:center;">Loading...<br/>Please wait.</p>';
 	current_url = globalData.next_url+'?json=1';
 	$.getJSON(current_url, function(data) {
-		document.getElementById("content").innerHTML='<p style="font-size:2em;text-align:center;">Loading...<br/>Please wait.</p>';
 		window.globalData = data;
 		document.getElementById("title").innerHTML=data.post.title;
 		document.getElementById("byline").innerHTML='&mdash; '+data.post.author.name;
