@@ -1,4 +1,5 @@
-window.current_url = 'http://kmit.in/emagazine/article/class-apart/?json=1';
+//window.current_url = 'http://kmit.in/emagazine/article/class-apart/?json=1';
+window.current_url = 'http://kmit.in/emagazine/article/scion-of-ikshvaku-review/?json=1';
 $.getJSON(current_url, function(data) {
 	window.globalData = data;
 	document.getElementById("title").innerHTML=data.post.title;
